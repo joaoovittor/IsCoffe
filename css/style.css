@@ -1,0 +1,99 @@
+/*Global*/
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+body,
+p,
+h1,
+h2,
+h3,
+ul,
+li,
+span {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: 0;
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+button {
+  background: 0;
+  border: 0;
+  padding: 0;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+/*Typography*/
+.font-1-ab {
+  font:
+    400 clamp(2rem, 7vw, 3rem)/1 "Chau Philomene One",
+    sans-serif;
+  letter-spacing: -1.5px;
+}
+.font-1-s {
+  font:
+    300 clamp(1.3rem, 5vw, 1.5rem)/1 "Belleza",
+    sans-serif;
+}
+/*Header*/
+.header-bg {
+  background: #c29369;
+  padding: 35px 100px;
+}
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+}
+.header h1 {
+  display: flex;
+  align-items: center;
+}
+.header h1::before {
+  content: "";
+  display: inline-block;
+  background: url("../img/icons/coffe.png") no-repeat center;
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  padding-left: 20px;
+}
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(25px, 5vw, 100px);
+}
+.nav-list a {
+  color: #000000;
+}
+.nav-list a:hover {
+  color: #695353;
+}
+@media (max-width: 966px) {
+  .header {
+    justify-content: center;
+  }
+}
