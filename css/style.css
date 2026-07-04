@@ -46,7 +46,7 @@ label {
 /*Typography*/
 .font-1-ab {
   font:
-    400 clamp(2rem, 7vw, 3rem)/1 "Chau Philomene One",
+    400 clamp(2.5rem, 7vw, 3rem)/1 "Chau Philomene One",
     sans-serif;
   letter-spacing: -1.5px;
 }
@@ -55,16 +55,34 @@ label {
     300 clamp(1.3rem, 5vw, 1.5rem)/1 "Belleza",
     sans-serif;
 }
+
+.font-1-c {
+  font:
+    700 clamp(2.5rem, 10vw, 6.5rem)/1 "Open Sans",
+    sans-serif;
+}
+.font-2-c {
+  font:
+    300 clamp(0.5rem, 5vw, 1.6rem)/1 "Open Sans",
+    sans-serif;
+}
+.font-3-c {
+  font:
+    300 clamp(0.7rem, 5vw, 1.4rem)/1 "Open Sans",
+    sans-serif;
+}
 /*Header*/
 .header-bg {
   background: #c29369;
-  padding: 35px 100px;
+  padding: 35px 15px 35px 15px;
 }
 .header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1600px;
   gap: 35px;
 }
 .header h1 {
@@ -92,8 +110,63 @@ label {
 .nav-list a:hover {
   color: #695353;
 }
-@media (max-width: 966px) {
+@media (max-width: 716px) {
   .header {
     justify-content: center;
+  }
+}
+/*Home*/
+.home-bg {
+  background: url("../img/home.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 1000px;
+}
+.home {
+  max-width: 1600px;
+
+  padding: clamp(35px, 5vw, 150px) 15px 35px 0;
+  margin: 0 auto;
+}
+.home h1 {
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+.home p {
+  max-width: 65ch;
+  color: #d9d9d9;
+  margin-bottom: 55px;
+}
+.home-btn {
+  display: flex;
+  gap: 20px;
+}
+.home-btn a:nth-child(1) {
+  color: #000000;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 30px;
+}
+.home-btn a:nth-child(1):hover {
+  background: #d9d9d9;
+}
+.home-btn a:nth-child(2):hover {
+  background: #7b521f;
+}
+.home-btn a:nth-child(2) {
+  background: #a16925;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 30px;
+}
+@media (max-width: 716px) {
+  .home {
+    display: grid;
+    text-align: center;
+    justify-items: center;
+  }
+  .home-bg {
+    height: auto;
   }
 }
