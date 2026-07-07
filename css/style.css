@@ -50,6 +50,26 @@ label {
     sans-serif;
   letter-spacing: -1.5px;
 }
+.font-2-ab {
+  font:
+    400 clamp(0.9rem, 7vw, 1.125rem)/1 "Chau Philomene One",
+    sans-serif;
+}
+.font-3-ab {
+  font:
+    400 clamp(2rem, 7vw, 2.2rem)/1 "Chau Philomene One",
+    sans-serif;
+}
+.font-4-ab {
+  font:
+    400 clamp(2rem, 7vw, 2.5rem)/1 "Chau Philomene One",
+    sans-serif;
+}
+.font-5-ab {
+  font:
+    400 clamp(1rem, 7vw, 1.125rem)/1 "Chau Philomene One",
+    sans-serif;
+}
 .font-1-s {
   font:
     300 clamp(1.3rem, 5vw, 1.5rem)/1 "Belleza",
@@ -68,7 +88,27 @@ label {
 }
 .font-3-c {
   font:
-    300 clamp(0.7rem, 5vw, 1.4rem)/1 "Open Sans",
+    500 clamp(0.7rem, 5vw, 1.4rem)/1 "Open Sans",
+    sans-serif;
+}
+.font-4-c {
+  font:
+    300 clamp(0.7rem, 5vw, 1rem)/1.725 "Open Sans",
+    sans-serif;
+}
+.font-5-c {
+  font:
+    700 clamp(0.7rem, 5vw, 1rem)/1 "Open Sans",
+    sans-serif;
+}
+.font-6-c {
+  font:
+    400 clamp(0.7rem, 5vw, 1.125rem)/1 "Open Sans",
+    sans-serif;
+}
+.font-7-c {
+  font:
+    700 clamp(0.7rem, 5vw, 1.125rem)/1 "Open Sans",
     sans-serif;
 }
 /*Header*/
@@ -110,7 +150,7 @@ label {
 .nav-list a:hover {
   color: #695353;
 }
-@media (max-width: 716px) {
+@media (max-width: 717px) {
   .header {
     justify-content: center;
   }
@@ -125,8 +165,7 @@ label {
 }
 .home {
   max-width: 1600px;
-
-  padding: clamp(35px, 5vw, 150px) 15px 35px 0;
+  padding: clamp(35px, 5vw, 150px) 15px 35px 15px;
   margin: 0 auto;
 }
 .home h1 {
@@ -160,7 +199,7 @@ label {
   padding: 15px 20px;
   border-radius: 30px;
 }
-@media (max-width: 716px) {
+@media (max-width: 717px) {
   .home {
     display: grid;
     text-align: center;
@@ -168,5 +207,142 @@ label {
   }
   .home-bg {
     height: auto;
+  }
+}
+
+/*Menu*/
+.menu-bg {
+  background: #f3eee6;
+}
+.menu {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 50px;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 70px 15px 70px 15px;
+  align-items: center;
+}
+.menu-content h3 {
+  display: flex;
+  align-items: center;
+  color: #c29369;
+  margin-bottom: 7px;
+}
+.menu-content h3::before {
+  content: "";
+  display: inline-block;
+  background: url("../img/icons/seed.png") no-repeat center;
+  height: 25px;
+  width: 30px;
+  background-size: contain;
+  margin-right: 7px;
+}
+.menu-content h2 {
+  margin-bottom: 15px;
+}
+.menu-content p {
+  max-width: 40ch;
+  margin-bottom: 7px;
+}
+.menu-details {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.menu-details span {
+  display: block;
+  color: #4d3227;
+}
+.menu-details a {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  background: #4d3227;
+  transition: 0.2s;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+.menu-details a:hover {
+  background: #624438;
+}
+.menu-details a::before {
+  content: "";
+  display: inline-block;
+  background: url("../img/icons/buy.png") no-repeat center;
+  height: 15px;
+  width: 15px;
+  background-size: contain;
+  margin-right: 7px;
+}
+.menu-content {
+  margin-bottom: 50px;
+}
+.menu-items h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.menu-items-options {
+  display: flex;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  gap: 50px;
+}
+.menu-items {
+  position: relative;
+}
+
+.menu-item {
+  flex: 0 0 180px;
+}
+.menu-items {
+  min-width: 0;
+}
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-item h3 {
+  display: flex;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.menu-item h3::after {
+  content: "↑";
+  display: inline-block;
+}
+.menu-item p {
+  color: #4d3227;
+}
+@media (max-width: 1523px) {
+  .menu-items::after {
+    content: "→";
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    color: var(--co-6);
+    animation: seta 0.5s ease-in 0s infinite alternate;
+  }
+  @keyframes seta {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(8px);
+    }
+  }
+}
+@media (max-width: 717px) {
+  .menu {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .menu-content {
+    justify-items: center;
+    text-align: center;
   }
 }
