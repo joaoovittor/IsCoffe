@@ -70,6 +70,11 @@ label {
     400 clamp(1rem, 7vw, 1.125rem)/1 "Chau Philomene One",
     sans-serif;
 }
+.font-6-ab {
+  font:
+    400 clamp(1.725rem, 7vw, 2.125rem)/1 "Chau Philomene One",
+    sans-serif;
+}
 .font-1-s {
   font:
     300 clamp(1.3rem, 5vw, 1.5rem)/1 "Belleza",
@@ -109,6 +114,11 @@ label {
 .font-7-c {
   font:
     700 clamp(0.7rem, 5vw, 1.125rem)/1.425 "Open Sans",
+    sans-serif;
+}
+.font-8-c {
+  font:
+    400 clamp(0.9rem, 3vw, 1rem)/1.825 "Open Sans",
     sans-serif;
 }
 /*Header*/
@@ -387,5 +397,94 @@ label {
   }
   to {
     transform: translateX(-100%);
+  }
+}
+
+/*Our*/
+.our-bg {
+  background: #f3eee6;
+}
+.our-content {
+  padding: 80px 15px 160px 15px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.our-content h2 {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.our-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+.our-items li {
+  flex: 1 1 180px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+.our-items li::after {
+  content: "";
+  top: 20px;
+  right: -50px;
+  position: absolute;
+  background: #a16925;
+  height: 220px;
+  width: 2px;
+}
+.our-items li:nth-child(4)::after {
+  display: none;
+}
+.our-items li img {
+  margin-bottom: 15px;
+  margin: 0 auto;
+  background: #a16925;
+  border: solid 7px #000000;
+  border-radius: 100px;
+  max-width: 170px;
+}
+.our-items h3 {
+  margin-bottom: 15px;
+}
+.our-items h3::after {
+  content: "↑";
+  margin-left: 15px;
+  display: inline-block;
+}
+.our-items li p {
+  margin: 0 auto;
+  max-width: 40ch;
+}
+@media (max-width: 1049px) {
+  .our-items li:nth-child(3)::after {
+    display: none;
+  }
+}
+@media (max-width: 769px) {
+  .our-items li:nth-child(2)::after {
+    display: none;
+  }
+  .our-items li:nth-child(3)::after {
+    display: block;
+  }
+}
+@media (max-width: 489px) {
+  .our-items li::after {
+    right: -15px;
+  }
+  .our-content h2 {
+    margin-bottom: 40px;
+  }
+  .our-items {
+    gap: 30px;
+  }
+}
+@media (max-width: 419px) {
+  .our-items li:nth-child(1)::after {
+    display: none;
+  }
+  .our-items li:nth-child(3)::after {
+    display: none;
   }
 }
