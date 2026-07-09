@@ -108,7 +108,7 @@ label {
 }
 .font-7-c {
   font:
-    700 clamp(0.7rem, 5vw, 1.125rem)/1 "Open Sans",
+    700 clamp(0.7rem, 5vw, 1.125rem)/1.425 "Open Sans",
     sans-serif;
 }
 /*Header*/
@@ -344,5 +344,48 @@ label {
   .menu-content {
     justify-items: center;
     text-align: center;
+  }
+}
+
+/*Gallery*/
+.gallery-bg {
+  background: #ddbda2;
+}
+.gallery-container {
+  display: grid;
+  padding: 50px 15px 50px 15px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.gallery-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+.carousel:hover .gallery-items {
+  animation-play-state: paused;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-items {
+  display: flex;
+  animation: spin 7s infinite linear;
+}
+
+.gallery-items li {
+  flex: 0 0 clamp(350px, 60vw, 450px);
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
   }
 }
