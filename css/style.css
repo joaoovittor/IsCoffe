@@ -148,6 +148,12 @@ label {
     500 clamp(0.9rem, 3vw, 1.125rem)/1 "Open Sans",
     sans-serif;
 }
+.font-14-c {
+  font:
+    700 clamp(0.9rem, 3vw, 1.125rem)/1 "Open Sans",
+    sans-serif;
+  letter-spacing: 1.125px;
+}
 /*Header*/
 .header-bg {
   background: #c29369;
@@ -591,4 +597,14 @@ label {
   .contact-img {
     display: none;
   }
+}
+
+/*Footer*/
+.footer-bg {
+  background: #f3eee6;
+}
+.footer-content {
+  text-align: center;
+  padding: clamp(35px, 6vw, 70px) 15px;
+  color: #4d3227;
 }
