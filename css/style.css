@@ -617,7 +617,10 @@ label {
   display: block;
   animation: quest 0.5s forwards;
 }
-
+.menu-item h3.active::after {
+  content: "↰";
+  display: inline-block;
+}
 @keyframes quest {
   from {
     opacity: 0;

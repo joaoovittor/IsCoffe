@@ -2,13 +2,18 @@
 function menuclickFunction() {
   const tabMenu = document.querySelectorAll(".menu-item-js");
   const contentMenu = document.querySelectorAll(".menu-js");
-
+  const h3 = document.querySelectorAll(".menu-item-js h3");
   if (tabMenu.length && contentMenu.length) {
+    h3[0].classList.add("active");
     contentMenu[0].classList.add("active");
     function tabClick(e) {
       contentMenu.forEach((item) => {
         item.classList.remove("active");
       });
+      h3.forEach((item) => {
+        item.classList.remove("active");
+      });
+      h3[e].classList.add("active");
       contentMenu[e].classList.add("active");
     }
 
