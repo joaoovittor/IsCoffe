@@ -16,7 +16,6 @@ function menuclickFunction() {
       h3[e].classList.add("active");
       contentMenu[e].classList.add("active");
     }
-
     tabMenu.forEach((item, target) => {
       item.addEventListener("click", () => {
         tabClick(target);
@@ -25,3 +24,28 @@ function menuclickFunction() {
   }
 }
 menuclickFunction();
+
+function TabJs() {
+  const questionTab = document.querySelectorAll(".listJs");
+  const questionTabh3 = document.querySelectorAll(".listJs h3");
+
+  if (questionTab.length && questionTabh3.length) {
+    questionTabh3[0].nextElementSibling.classList.add("active");
+    questionTabh3[0].classList.add("active");
+    function Halfclick(index) {
+      questionTabh3.forEach((item) => {
+        item.nextElementSibling.classList.remove("active");
+        item.classList.remove("active");
+      });
+      questionTabh3[index].nextElementSibling.classList.add("active");
+      questionTabh3[index].classList.add("active");
+    }
+
+    questionTab.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        Halfclick(index);
+      });
+    });
+  }
+}
+TabJs();

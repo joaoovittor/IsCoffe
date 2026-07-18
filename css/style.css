@@ -486,6 +486,7 @@ label {
   content: "↑";
   margin-left: 15px;
   display: inline-block;
+  transition: transform 0.5s;
 }
 .our-items li p {
   margin: 0 auto;
@@ -641,5 +642,28 @@ label {
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
+  }
+}
+
+/*JavaScript Tab*/
+.listJs p {
+  opacity: 0;
+}
+.listJs p.active {
+  opacity: 1;
+  animation: tab 0.5s forwards;
+}
+.listJs h3.active::after {
+  content: "↓";
+}
+
+@keyframes tab {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
