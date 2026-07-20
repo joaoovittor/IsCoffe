@@ -49,3 +49,24 @@ function TabJs() {
   }
 }
 TabJs();
+
+function smoothScroll() {
+  const link = document.querySelectorAll('.nav-listJs a[href^="#"]');
+
+  if (link.length) {
+    function scrollLink(event) {
+      event.preventDefault();
+      const href = this.getAttribute("href");
+      const section = document.querySelector(href);
+
+      section.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    link.forEach((item) => {
+      item.addEventListener("click", scrollLink);
+    });
+  }
+}
+scrollAnimation();
