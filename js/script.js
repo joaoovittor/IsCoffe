@@ -69,4 +69,23 @@ function smoothScroll() {
     });
   }
 }
-scrollAnimation();
+smoothScroll();
+
+function scroll() {
+  const sectionScroll = document.querySelectorAll(".scrollJs");
+  if (sectionScroll.length) {
+    function scrollAnimation(item) {
+      const half = window.innerHeight * 0.6;
+      sectionScroll.forEach((item) => {
+        const top = item.offsetTop - half;
+        if (top < window.pageYOffset) {
+          item.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", scrollAnimation);
+    scrollAnimation();
+  }
+}
+scroll();
