@@ -77,8 +77,6 @@ function scroll() {
     function scrollAnimation(item) {
       const half = window.innerHeight * 0.6;
       sectionScroll.forEach((item) => {
-        const rect = item.getBoundingClientRect();
-        console.log(rect.top);
         const top = item.offsetTop - half;
         if (top < window.pageYOffset) {
           item.classList.add("active");
